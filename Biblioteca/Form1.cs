@@ -10,11 +10,25 @@ using System.Windows.Forms;
 
 namespace Biblioteca
 {
-    public partial class Form1 : Form
-    {
-        public Form1()
-        {
+    public partial class frmPrincipal : Form {
+        public frmPrincipal() {
             InitializeComponent();
+        }
+
+        private void btnSocios_Click(object sender, EventArgs e) {
+            Form formulario = new frmSocios();
+            formulario.ShowDialog();
+        }
+
+        private void btnLibros_Click(object sender, EventArgs e) {
+            Form formulario = new frmLibros();
+            formulario.ShowDialog();
+        }
+
+        private void btnPrestamos_Click(object sender, EventArgs e)
+        {
+            Form formulario = new frmPrestamos();
+            formulario.ShowDialog();
         }
     }
 }

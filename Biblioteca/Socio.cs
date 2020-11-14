@@ -55,14 +55,6 @@ namespace Biblioteca {
             ejemplar = frmPrincipal.Socios[_socio].Retirados.ElementAt(_ejemplar);
             frmPrincipal.Socios[_socio].Retirados.RemoveAt(_ejemplar);
             return ejemplar;
-            /*
-             public Ejemplar egresoEjemplar(int contador) {
-                Ejemplar ejemplar = new Ejemplar();
-                ejemplar = frmPrincipal.Libros[contador].Ejemplares.ElementAt(0);
-                frmPrincipal.Libros[contador].Ejemplares.RemoveAt(0);
-                return ejemplar;
-            }
-             */
         }
     }
 }

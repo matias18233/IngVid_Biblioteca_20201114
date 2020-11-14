@@ -27,7 +27,6 @@ namespace Biblioteca {
             get => ejemplares;
             set => ejemplares = value;
         }
-
         // CONSTRUCTOR
         public Libro() {
             Ejemplares = new List<Ejemplar>();

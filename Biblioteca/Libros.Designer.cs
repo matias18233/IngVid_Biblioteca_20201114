@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnEjemplar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,25 +45,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Agregar libro";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnEjemplar
             // 
             this.btnEjemplar.Location = new System.Drawing.Point(87, 19);
             this.btnEjemplar.Name = "btnEjemplar";
             this.btnEjemplar.Size = new System.Drawing.Size(98, 23);
-            this.btnEjemplar.TabIndex = 1;
+            this.btnEjemplar.TabIndex = 2;
             this.btnEjemplar.Text = "Agregar ejemplar";
             this.btnEjemplar.UseVisualStyleBackColor = true;
             this.btnEjemplar.Click += new System.EventHandler(this.btnEjemplar_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Agregar libro";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLibros
             // 

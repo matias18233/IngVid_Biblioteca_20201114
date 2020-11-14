@@ -32,6 +32,7 @@ namespace Biblioteca {
         private void radioClasico_CheckedChanged(object sender, EventArgs e) {
             txtCuota.Enabled = false;
             lblLimite.Text = "3";
+            txtCuota.Text = "";
         }
         private void radioVip_CheckedChanged(object sender, EventArgs e) {
             txtCuota.Enabled = true;

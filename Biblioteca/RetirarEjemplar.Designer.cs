@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnCargar = new System.Windows.Forms.Button();
-            this.lstLibros = new System.Windows.Forms.ListBox();
             this.lstSocios = new System.Windows.Forms.ListBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lstLibros = new System.Windows.Forms.ListBox();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +47,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado de socios";
             // 
+            // lstSocios
+            // 
+            this.lstSocios.FormattingEnabled = true;
+            this.lstSocios.Location = new System.Drawing.Point(6, 19);
+            this.lstSocios.Name = "lstSocios";
+            this.lstSocios.Size = new System.Drawing.Size(312, 134);
+            this.lstSocios.TabIndex = 1;
+            this.lstSocios.SelectedIndexChanged += new System.EventHandler(this.lstSocios_SelectedIndexChanged);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lstLibros);
@@ -57,33 +66,24 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Listado de libros";
             // 
-            // btnCargar
-            // 
-            this.btnCargar.Location = new System.Drawing.Point(13, 353);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
-            this.btnCargar.TabIndex = 2;
-            this.btnCargar.Text = "Cargar retiro";
-            this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.Click += new System.EventHandler(this.button1_Click);
-            // 
             // lstLibros
             // 
             this.lstLibros.FormattingEnabled = true;
             this.lstLibros.Location = new System.Drawing.Point(6, 19);
             this.lstLibros.Name = "lstLibros";
             this.lstLibros.Size = new System.Drawing.Size(312, 134);
-            this.lstLibros.TabIndex = 0;
+            this.lstLibros.TabIndex = 2;
             this.lstLibros.SelectedIndexChanged += new System.EventHandler(this.lstLibros_SelectedIndexChanged);
             // 
-            // lstSocios
+            // btnCargar
             // 
-            this.lstSocios.FormattingEnabled = true;
-            this.lstSocios.Location = new System.Drawing.Point(6, 19);
-            this.lstSocios.Name = "lstSocios";
-            this.lstSocios.Size = new System.Drawing.Size(312, 134);
-            this.lstSocios.TabIndex = 1;
-            this.lstSocios.SelectedIndexChanged += new System.EventHandler(this.lstSocios_SelectedIndexChanged);
+            this.btnCargar.Location = new System.Drawing.Point(13, 353);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.TabIndex = 3;
+            this.btnCargar.Text = "Cargar retiro";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmRetirarEjemplar
             // 

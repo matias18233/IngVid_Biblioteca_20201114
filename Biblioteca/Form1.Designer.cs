@@ -67,7 +67,7 @@
             this.btnPrestamos.Location = new System.Drawing.Point(170, 19);
             this.btnPrestamos.Name = "btnPrestamos";
             this.btnPrestamos.Size = new System.Drawing.Size(75, 23);
-            this.btnPrestamos.TabIndex = 2;
+            this.btnPrestamos.TabIndex = 3;
             this.btnPrestamos.Text = "Préstamos";
             this.btnPrestamos.UseVisualStyleBackColor = true;
             this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
@@ -77,7 +77,7 @@
             this.btnLibros.Location = new System.Drawing.Point(88, 19);
             this.btnLibros.Name = "btnLibros";
             this.btnLibros.Size = new System.Drawing.Size(75, 23);
-            this.btnLibros.TabIndex = 1;
+            this.btnLibros.TabIndex = 2;
             this.btnLibros.Text = "Libros";
             this.btnLibros.UseVisualStyleBackColor = true;
             this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click);
@@ -87,7 +87,7 @@
             this.btnSocios.Location = new System.Drawing.Point(6, 19);
             this.btnSocios.Name = "btnSocios";
             this.btnSocios.Size = new System.Drawing.Size(75, 23);
-            this.btnSocios.TabIndex = 0;
+            this.btnSocios.TabIndex = 1;
             this.btnSocios.Text = "Socios";
             this.btnSocios.UseVisualStyleBackColor = true;
             this.btnSocios.Click += new System.EventHandler(this.btnSocios_Click);

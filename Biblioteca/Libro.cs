@@ -57,8 +57,8 @@ namespace Biblioteca {
             frmPrincipal.Libros[contador].Ejemplares.RemoveAt(0);
             return ejemplar;
         }
-        public void ingresoEjemplar(Ejemplar _ejemplar) {
-
+        public void ingresoEjemplar(Ejemplar _ejemplar, int contador) {
+            frmPrincipal.Libros[contador].Ejemplares.Add(_ejemplar);
         }
     }
 }

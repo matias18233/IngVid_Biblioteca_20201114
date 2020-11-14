@@ -27,7 +27,6 @@ namespace Biblioteca {
 
         private void lstSocios_SelectedIndexChanged(object sender, EventArgs e) {
             // Variables útiles para mostrar mensajes
-            bool error = false;
             string mensaje = "";
             string titulo = "";
 
@@ -81,7 +80,6 @@ namespace Biblioteca {
                                     titulo = "Genial!";
                                     mostrarMensaje(titulo, mensaje);
                                 } else {
-                                    lstLibros.Enabled = false;
                                     mensaje = "Este libro no cuenta con ejemplares para prestar";
                                     titulo = "Atención";
                                     mostrarMensaje(titulo, mensaje);
@@ -110,7 +108,6 @@ namespace Biblioteca {
                     if (libro.consultarDisponibles(libro)) {
 
                     } else {
-                        lstLibros.Enabled = false;
                         mensaje = "Este libro no cuenta con ejemplares para prestar";
                         titulo = "Atención";
                         mostrarMensaje(titulo, mensaje);
@@ -118,6 +115,16 @@ namespace Biblioteca {
                 }
                 contador = contador + 1;
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

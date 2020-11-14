@@ -32,6 +32,7 @@ namespace Biblioteca {
         public Libro() {
             Ejemplares = new List<Ejemplar>();
         }
+        // METODOS
         public Libro agregarLibro(string _nombre, string _isbc, string _autor) {
             Libro libro = new Libro();
 

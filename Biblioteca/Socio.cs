@@ -27,6 +27,11 @@ namespace Biblioteca {
             get => retirados;
             set => retirados = value;
         }
+        private int limitePrestamo;
+        public int LimitePrestamo {
+            get => limitePrestamo;
+            set => limitePrestamo = value;
+        }
         // CONSTRUCTOR
         public Socio() {
             Retirados = new List<Ejemplar>();
@@ -43,11 +48,6 @@ namespace Biblioteca {
             ejemplar = new Ejemplar();
 
             return ejemplar;
-        }
-        private int limitePrestamo;
-        public int LimitePrestamo {
-            get => limitePrestamo;
-            set => limitePrestamo = value;
         }
         public void devolverEjemplar(Ejemplar ejemplar) {
 

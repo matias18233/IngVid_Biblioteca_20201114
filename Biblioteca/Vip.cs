@@ -16,5 +16,16 @@ namespace Biblioteca {
         public Vip() {
             LimitePrestamo = 15;
         }
+        // METODOS
+        public Vip agregarSocioVip(string _nombre, string _apellido, int _codSocio, float _cuota) {
+            Vip vip = new Vip();
+
+            vip.Nombre = _nombre;
+            vip.Apellido = _apellido;
+            vip.CodSocio = _codSocio;
+            vip.Cuota = _cuota;
+
+            return vip;
+        }
     }
 }

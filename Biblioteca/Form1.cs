@@ -55,5 +55,10 @@ namespace Biblioteca {
         public void mostrarMensaje(string titulo, string mensaje) {
             MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
+
+        private void button2_Click(object sender, EventArgs e) {
+            string cadena = Convert.ToString(Socios.Count);
+            mostrarMensaje("Cantidad de socios: ", cadena);
+        }
     }
 }

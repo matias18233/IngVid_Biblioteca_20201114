@@ -61,9 +61,7 @@ namespace Biblioteca {
             } else {
                 Libro libro = new Libro();
                 libro = libro.agregarLibro(nombre, isbn, autor);
-
                 // Almacenamiento de libro
-
                 frmPrincipal.Libros.Add(libro);
                 mensaje = "Libro almacenado correctamente";
                 titulo = "Genial!";

@@ -60,11 +60,48 @@ namespace Biblioteca {
                     error = true;
                     mensaje = "No se ha especificado un apellido";
                 }
+                if (error == false) {
+                    codigo = txtCodigo.Text;
+                    if ("".Equals(codigo)) {
+                        error = true;
+                        mensaje = "No se ha especificado un código";
+                    }
+                    if (error == false) {
+                        vip = radioVip.Checked;
+                        clasico = radioClasico.Checked;
+                        if (vip == true) {
+                            cuota = txtCuota.Text;
+                            if ("".Equals(cuota)) {
+                                error = true;
+                                mensaje = "No se ha especificado un valor de cuota";
+                            } else {
+                                // Validar cuota
+                            }
+                        } else if (clasico == true) {
+                            // Listo para guardar
+                        } else {
+                            error = true;
+                            mensaje = "No se ha especificado un tipo de socio";
+                        }
+                    }
+                }
             }
             if (error == true) {
                 mostrarMensaje(titulo, mensaje);
             } else {
+                if (vip == true) {
+                    Vip vip_O = new Vip();
+                    
+                    vip_O.agregarSocioVip(nombre, apellido, Convert.ToInt32(codigo), float.Parse(cuota));
 
+                    frmPrincipal.Socios.Add(vip_O);
+                } else if (clasico == true) {
+                    Clasico clasico_O = new Clasico();
+
+                    clasico_O.agregarSocioClasico(nombre, apellido, Convert.ToInt32(codigo));
+                    
+                    frmPrincipal.Socios.Add(clasico_O);
+                }
             }
             
         }

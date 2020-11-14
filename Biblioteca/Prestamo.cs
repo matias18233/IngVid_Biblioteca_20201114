@@ -17,8 +17,8 @@ namespace Biblioteca {
             get => socio;
             set => socio = value;
         }
-        private DateTime fechaPrestamo;
-        public DateTime FechaPrestamo {
+        private string fechaPrestamo;
+        public string FechaPrestamo {
             get => fechaPrestamo;
             set => fechaPrestamo = value;
         }
@@ -28,12 +28,15 @@ namespace Biblioteca {
             socio = new Socio();
         }
         // METODOS
-        public void agregarPrestamo(Ejemplar ejemplar, Socio socio) {
-
+        public void agregarPrestamo(Ejemplar _ejemplar, Socio _socio) {
+            Prestamo prestamo = new Prestamo();
+            prestamo.Ejemplar = _ejemplar;
+            prestamo.Socio = _socio;
+            prestamo.FechaPrestamo = DateTime.Now.ToString("dd/MM/yyyy h:mm:ss");
+            frmPrincipal.Prestamos.Add(prestamo);
         }
         public void imprimirPrestamo() {
 
         }
-        
     }
 }

@@ -75,10 +75,14 @@ namespace Biblioteca {
                         foreach (Libro libro in frmPrincipal.Libros) {
                             if (contador2 == seleccionado_libro) {
                                 if (libro.consultarDisponibles(libro)) {
-                                    socio.retirarEjemplar(socio, contador, libro.egresoEjemplar(contador2));
+                                    Ejemplar ejemplar = new Ejemplar();
+                                    ejemplar = libro.egresoEjemplar(contador2);
+                                    socio.retirarEjemplar(socio, contador, ejemplar);
                                     mensaje = "El socio hizo un retiro de un ejemplar";
                                     titulo = "Genial!";
                                     mostrarMensaje(titulo, mensaje);
+                                    Prestamo prestamo = new Prestamo();
+                                    prestamo.agregarPrestamo(ejemplar, socio);
                                 } else {
                                     mensaje = "Este libro no cuenta con ejemplares para prestar";
                                     titulo = "Atención";

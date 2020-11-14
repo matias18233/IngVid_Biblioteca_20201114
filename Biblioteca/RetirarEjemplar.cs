@@ -89,8 +89,8 @@ namespace Biblioteca {
                             }
                             contador2 = contador2 + 1;
                         }
-                        // 
                     }
+                    contador = contador + 1;
                 }
             }
         }
@@ -100,7 +100,6 @@ namespace Biblioteca {
 
         private void lstLibros_SelectedIndexChanged(object sender, EventArgs e) {
             // Variables útiles para mostrar mensajes
-            bool error = false;
             string mensaje = "";
             string titulo = "";
 
@@ -109,13 +108,12 @@ namespace Biblioteca {
             foreach (Libro libro in frmPrincipal.Libros) {
                 if (contador == seleccionado) {
                     if (libro.consultarDisponibles(libro)) {
-                        btnCargar.Enabled = true;
+
                     } else {
                         lstLibros.Enabled = false;
                         mensaje = "Este libro no cuenta con ejemplares para prestar";
                         titulo = "Atención";
                         mostrarMensaje(titulo, mensaje);
-                        btnCargar.Enabled = false;
                     }
                 }
                 contador = contador + 1;

@@ -98,6 +98,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de administración de bibliotecas";
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

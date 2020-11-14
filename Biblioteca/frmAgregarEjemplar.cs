@@ -71,6 +71,10 @@ namespace Biblioteca {
                     }
                     contador = contador + 1;
                 }
+                titulo = "Genial!";
+                mensaje = "Ejemplar agregado al libro";
+                mostrarMensaje(titulo, mensaje);
+                limpiarPantalla();
             }
         }
 

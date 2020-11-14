@@ -13,3 +13,4 @@ C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.frmPr
 C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.frmSocios.resources
 C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.frmAgregarLibro.resources
 C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.frmAgregarEjemplar.resources
+C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.frmAgregarSocio.resources

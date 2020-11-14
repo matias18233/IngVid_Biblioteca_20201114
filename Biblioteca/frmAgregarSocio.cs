@@ -65,6 +65,8 @@ namespace Biblioteca {
                     if ("".Equals(codigo)) {
                         error = true;
                         mensaje = "No se ha especificado un código";
+                    } else {
+                        // validar el código
                     }
                     if (error == false) {
                         vip = radioVip.Checked;
@@ -91,17 +93,21 @@ namespace Biblioteca {
             } else {
                 if (vip == true) {
                     Vip vip_O = new Vip();
-                    
-                    vip_O.agregarSocioVip(nombre, apellido, Convert.ToInt32(codigo), float.Parse(cuota));
+
+                    vip_O = vip_O.agregarSocioVip(nombre, apellido, Convert.ToInt32(codigo), float.Parse(cuota));
 
                     frmPrincipal.Socios.Add(vip_O);
                 } else if (clasico == true) {
                     Clasico clasico_O = new Clasico();
 
-                    clasico_O.agregarSocioClasico(nombre, apellido, Convert.ToInt32(codigo));
+                    clasico_O = clasico_O.agregarSocioClasico(nombre, apellido, Convert.ToInt32(codigo));
                     
                     frmPrincipal.Socios.Add(clasico_O);
                 }
+                mensaje = "Socio almacenado correctamente";
+                titulo = "Genial!";
+                mostrarMensaje(titulo, mensaje);
+                limpiarPantalla();
             }
             
         }

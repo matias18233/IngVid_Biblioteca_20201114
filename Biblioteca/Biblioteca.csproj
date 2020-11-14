@@ -53,6 +53,12 @@
       <DependentUpon>AgregarLibro.cs</DependentUpon>
     </Compile>
     <Compile Include="Clasico.cs" />
+    <Compile Include="DevolverEjemplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevolverEjemplar.Designer.cs">
+      <DependentUpon>DevolverEjemplar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ejemplar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetirarEjemplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetirarEjemplar.Designer.cs">
+      <DependentUpon>RetirarEjemplar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Socio.cs" />
     <Compile Include="Socios.cs">
       <SubType>Form</SubType>
@@ -98,6 +110,9 @@
     <Compile Include="Vip.cs" />
     <EmbeddedResource Include="AgregarLibro.resx">
       <DependentUpon>AgregarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevolverEjemplar.resx">
+      <DependentUpon>DevolverEjemplar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -123,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RetirarEjemplar.resx">
+      <DependentUpon>RetirarEjemplar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Socios.resx">
       <DependentUpon>Socios.cs</DependentUpon>
     </EmbeddedResource>

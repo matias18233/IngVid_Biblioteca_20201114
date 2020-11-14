@@ -25,7 +25,7 @@ namespace Biblioteca {
 
         private void frmAgregarEjemplar_Load(object sender, EventArgs e) {
             lstLibros.Items.Clear();
-            foreach (Libro libro in frmPrincipal.Libros) {
+            foreach (var libro in frmPrincipal.Libros) {
                 lstLibros.Items.Add(libro.Nombre);
             }
         }

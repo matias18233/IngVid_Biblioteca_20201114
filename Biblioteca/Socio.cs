@@ -37,17 +37,18 @@ namespace Biblioteca {
             Retirados = new List<Ejemplar>();
         }
         // METODOS
-        public bool consultarLimite() {
+        public bool consultarLimite(Socio _socio) {
             bool control;
-            control = false;
-            
+            if (_socio.Retirados.Count() < _socio.LimitePrestamo) {
+                control = true;
+            } else {
+                control = false;
+            }
             return control;
         }
-        public Ejemplar retirarEjemplar() {
-            Ejemplar ejemplar;
-            ejemplar = new Ejemplar();
-
-            return ejemplar;
+        public Socio retirarEjemplar(Socio _socio, Ejemplar _ejemplar) {
+            _socio.Retirados.Add(_ejemplar);
+            return _socio;
         }
         public void devolverEjemplar(Ejemplar ejemplar) {
 

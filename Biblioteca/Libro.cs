@@ -42,5 +42,23 @@ namespace Biblioteca {
 
             return libro;
         }
+        public bool consultarDisponibles(Libro _libro) {
+            bool control;
+            if (_libro.Ejemplares.Count() > 0) {
+                control = true;
+            } else {
+                control = false;
+            }
+            return control;
+        }
+        public Ejemplar egresoEjemplar() {
+            Ejemplar ejemplar = new Ejemplar();
+            ejemplar = frmPrincipal.Libros[0].Ejemplares.ElementAt(0);
+            frmPrincipal.Libros[0].Ejemplares.RemoveAt(0);
+            return ejemplar;
+        }
+        public void ingresoEjemplar(Ejemplar _ejemplar) {
+
+        }
     }
 }

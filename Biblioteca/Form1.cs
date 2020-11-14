@@ -16,11 +16,19 @@ namespace Biblioteca {
             get => libros;
             set => libros = value;
         }
+        
         static List<Socio> socios = new List<Socio>();
         public static List<Socio> Socios {
             get => socios;
             set => socios = value;
         }
+        /*
+        static List<Vip> vip = new List<Vip>();
+        public static List<Vip> Vip {
+            get => vip;
+            set => vip = value;
+        }
+        */
         // CONSTRUCTOR
         public frmPrincipal() {
             InitializeComponent();

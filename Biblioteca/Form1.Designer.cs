@@ -30,9 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSocios = new System.Windows.Forms.Button();
-            this.btnLibros = new System.Windows.Forms.Button();
             this.btnPrestamos = new System.Windows.Forms.Button();
+            this.btnLibros = new System.Windows.Forms.Button();
+            this.btnSocios = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,15 +61,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Herramientas";
             // 
-            // btnSocios
+            // btnPrestamos
             // 
-            this.btnSocios.Location = new System.Drawing.Point(6, 19);
-            this.btnSocios.Name = "btnSocios";
-            this.btnSocios.Size = new System.Drawing.Size(75, 23);
-            this.btnSocios.TabIndex = 0;
-            this.btnSocios.Text = "Socios";
-            this.btnSocios.UseVisualStyleBackColor = true;
-            this.btnSocios.Click += new System.EventHandler(this.btnSocios_Click);
+            this.btnPrestamos.Location = new System.Drawing.Point(170, 19);
+            this.btnPrestamos.Name = "btnPrestamos";
+            this.btnPrestamos.Size = new System.Drawing.Size(75, 23);
+            this.btnPrestamos.TabIndex = 2;
+            this.btnPrestamos.Text = "Préstamos";
+            this.btnPrestamos.UseVisualStyleBackColor = true;
+            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
             // 
             // btnLibros
             // 
@@ -80,26 +81,38 @@
             this.btnLibros.UseVisualStyleBackColor = true;
             this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click);
             // 
-            // btnPrestamos
+            // btnSocios
             // 
-            this.btnPrestamos.Location = new System.Drawing.Point(170, 19);
-            this.btnPrestamos.Name = "btnPrestamos";
-            this.btnPrestamos.Size = new System.Drawing.Size(75, 23);
-            this.btnPrestamos.TabIndex = 2;
-            this.btnPrestamos.Text = "Préstamos";
-            this.btnPrestamos.UseVisualStyleBackColor = true;
-            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
+            this.btnSocios.Location = new System.Drawing.Point(6, 19);
+            this.btnSocios.Name = "btnSocios";
+            this.btnSocios.Size = new System.Drawing.Size(75, 23);
+            this.btnSocios.TabIndex = 0;
+            this.btnSocios.Text = "Socios";
+            this.btnSocios.UseVisualStyleBackColor = true;
+            this.btnSocios.Click += new System.EventHandler(this.btnSocios_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(143, 222);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de administración de bibliotecas";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -112,6 +125,7 @@
         private System.Windows.Forms.Button btnPrestamos;
         private System.Windows.Forms.Button btnLibros;
         private System.Windows.Forms.Button btnSocios;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Biblioteca {
-    class Vip : Socio {
+    public class Vip : Socio {
         // ATRIBUTOS
         private float cuota;
         public float Cuota {

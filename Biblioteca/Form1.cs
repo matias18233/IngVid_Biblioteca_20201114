@@ -8,11 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Biblioteca
-{
+namespace Biblioteca {
     public partial class frmPrincipal : Form {
+
+        static List<Libro> libros = new List<Libro>();
+
+        public static List<Libro> Libros {
+            get => libros;
+            set => libros = value;
+        }
+
         public frmPrincipal() {
             InitializeComponent();
+            
         }
 
         private void btnSocios_Click(object sender, EventArgs e) {
@@ -25,10 +33,28 @@ namespace Biblioteca
             formulario.ShowDialog();
         }
 
-        private void btnPrestamos_Click(object sender, EventArgs e)
-        {
+        private void btnPrestamos_Click(object sender, EventArgs e) {
             Form formulario = new frmPrestamos();
             formulario.ShowDialog();
+        }
+
+        private void frmPrincipal_Load(object sender, EventArgs e) {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            string cadena = Convert.ToString(Libros.Count);
+            mostrarMensaje("Cantidad de libros: ", cadena);
+            int contador = 1;
+            foreach (Libro libro in Libros) {
+                cadena = "El libro: " + Convert.ToString(contador) + " tiene: ";
+                mostrarMensaje(cadena, Convert.ToString(libro.Ejemplares.Count()));
+                contador = contador + 1;
+            }
+        }
+
+        public void mostrarMensaje(string titulo, string mensaje) {
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

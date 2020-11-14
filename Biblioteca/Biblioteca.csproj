@@ -46,18 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarLibro.Designer.cs">
+      <DependentUpon>AgregarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clasico.cs" />
+    <Compile Include="Ejemplar.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarEjemplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarEjemplar.Designer.cs">
+      <DependentUpon>frmAgregarEjemplar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libro.cs" />
     <Compile Include="Libros.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Libros.Designer.cs">
       <DependentUpon>Libros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prestamo.cs" />
     <Compile Include="Prestamos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,14 +82,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Socio.cs" />
     <Compile Include="Socios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Socios.Designer.cs">
       <DependentUpon>Socios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vip.cs" />
+    <EmbeddedResource Include="AgregarLibro.resx">
+      <DependentUpon>AgregarLibro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarEjemplar.resx">
+      <DependentUpon>frmAgregarEjemplar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Libros.resx">
       <DependentUpon>Libros.cs</DependentUpon>

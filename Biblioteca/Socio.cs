@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Biblioteca {
-    class Socio {
+    public class Socio {
         // ATRIBUTOS
         private string nombre;
         public string Nombre {

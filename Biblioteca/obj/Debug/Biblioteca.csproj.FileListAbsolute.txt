@@ -11,3 +11,5 @@ C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.exe
 C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.pdb
 C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.frmPrestamos.resources
 C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.frmSocios.resources
+C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.frmAgregarLibro.resources
+C:\xampp\htdocs\IngVid_Biblioteca_20201114\Biblioteca\obj\Debug\Biblioteca.frmAgregarEjemplar.resources

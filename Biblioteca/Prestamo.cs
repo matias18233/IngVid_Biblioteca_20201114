@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Biblioteca {
-    class Prestamo {
+    public class Prestamo {
         // ATRIBUTOS
         private Ejemplar ejemplar;
         internal Ejemplar Ejemplar {

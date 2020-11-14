@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Biblioteca {
-    class Libro {
+    public class Libro {
         // ATRIBUTOS
         private string nombre;
         public string Nombre {
@@ -22,14 +22,24 @@ namespace Biblioteca {
             get => autor;
             set => autor = value;
         }
-        List<Ejemplar> ejemplares;
-        public List<Ejemplar> Ejemplares {
+        private List<Ejemplar> ejemplares;
+        internal List<Ejemplar> Ejemplares {
             get => ejemplares;
             set => ejemplares = value;
         }
+
         // CONSTRUCTOR
         public Libro() {
             Ejemplares = new List<Ejemplar>();
+        }
+        public Libro agregarLibro(string _nombre, string _isbc, string _autor) {
+            Libro libro = new Libro();
+
+            libro.Nombre = _nombre;
+            libro.Isbn = _isbc;
+            libro.autor = _autor;
+
+            return libro;
         }
     }
 }

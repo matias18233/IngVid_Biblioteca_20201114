@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Biblioteca {
-    class Ejemplar {
+    public class Ejemplar {
         // ATRIBUTOS
         private Libro libro;
         internal Libro Libro {
@@ -26,5 +26,16 @@ namespace Biblioteca {
         public Ejemplar() {
             Libro = new Libro();
         }
+        // METODOS
+        public Ejemplar agregarEjemplar(Libro _libro, int _edicion, string _ubicacion) {
+            Ejemplar ejemplar = new Ejemplar();
+
+            ejemplar.Libro = _libro;
+            ejemplar.edicion = _edicion;
+            ejemplar.ubicacion = _ubicacion;
+
+            return ejemplar;
+        }
+
     }
 }

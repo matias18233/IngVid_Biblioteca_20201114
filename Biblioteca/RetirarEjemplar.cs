@@ -76,8 +76,10 @@ namespace Biblioteca {
                         foreach (Libro libro in frmPrincipal.Libros) {
                             if (contador2 == seleccionado_libro) {
                                 if (libro.consultarDisponibles(libro)) {
-                                    socio.retirarEjemplar(socio, libro.egresoEjemplar());
-                                    // frmPrincipal.Socios[contador].retirarEjemplar();
+                                    socio.retirarEjemplar(socio, contador, libro.egresoEjemplar(contador2));
+                                    mensaje = "El socio hizo un retiro de un ejemplar";
+                                    titulo = "Genial!";
+                                    mostrarMensaje(titulo, mensaje);
                                 } else {
                                     lstLibros.Enabled = false;
                                     mensaje = "Este libro no cuenta con ejemplares para prestar";
@@ -107,12 +109,13 @@ namespace Biblioteca {
             foreach (Libro libro in frmPrincipal.Libros) {
                 if (contador == seleccionado) {
                     if (libro.consultarDisponibles(libro)) {
-                        
+                        btnCargar.Enabled = true;
                     } else {
                         lstLibros.Enabled = false;
                         mensaje = "Este libro no cuenta con ejemplares para prestar";
                         titulo = "Atención";
                         mostrarMensaje(titulo, mensaje);
+                        btnCargar.Enabled = false;
                     }
                 }
                 contador = contador + 1;

@@ -46,8 +46,8 @@ namespace Biblioteca {
             }
             return control;
         }
-        public Socio retirarEjemplar(Socio _socio, Ejemplar _ejemplar) {
-            _socio.Retirados.Add(_ejemplar);
+        public Socio retirarEjemplar(Socio _socio, int contador, Ejemplar _ejemplar) {
+            frmPrincipal.Socios[contador].Retirados.Add(_ejemplar);
             return _socio;
         }
         public void devolverEjemplar(Ejemplar ejemplar) {

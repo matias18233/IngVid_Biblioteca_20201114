@@ -67,6 +67,12 @@ namespace Biblioteca {
         private void button2_Click(object sender, EventArgs e) {
             string cadena = Convert.ToString(Socios.Count);
             mostrarMensaje("Cantidad de socios: ", cadena);
+            int contador = 1;
+            foreach (Socio socio in Socios) {
+                cadena = "El socio: " + Convert.ToString(contador) + " tiene: ";
+                mostrarMensaje(cadena, Convert.ToString(socio.Retirados.Count()));
+                contador = contador + 1;
+            }
         }
     }
 }

@@ -51,10 +51,10 @@ namespace Biblioteca {
             }
             return control;
         }
-        public Ejemplar egresoEjemplar() {
+        public Ejemplar egresoEjemplar(int contador) {
             Ejemplar ejemplar = new Ejemplar();
-            ejemplar = frmPrincipal.Libros[0].Ejemplares.ElementAt(0);
-            frmPrincipal.Libros[0].Ejemplares.RemoveAt(0);
+            ejemplar = frmPrincipal.Libros[contador].Ejemplares.ElementAt(0);
+            frmPrincipal.Libros[contador].Ejemplares.RemoveAt(0);
             return ejemplar;
         }
         public void ingresoEjemplar(Ejemplar _ejemplar) {

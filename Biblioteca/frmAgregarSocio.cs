@@ -68,6 +68,12 @@ namespace Biblioteca {
                         mensaje = "No se ha especificado un código";
                     } else {
                         // validar el código
+                        if (validarNumero(codigo)) {
+
+                        } else {
+                            error = true;
+                            mensaje = "No se ha ingresado un valor numérico en el código";
+                        }
                     }
                     if (error == false) {
                         vip = radioVip.Checked;
@@ -79,6 +85,12 @@ namespace Biblioteca {
                                 mensaje = "No se ha especificado un valor de cuota";
                             } else {
                                 // Validar cuota
+                                if (validarNumero(cuota)) {
+                                    
+                                } else {
+                                    error = true;
+                                    mensaje = "No se ha ingresado un valor numérico en la cuota";
+                                }
                             }
                         } else if (clasico == true) {
                             // Listo para guardar
@@ -107,13 +119,27 @@ namespace Biblioteca {
                 }
                 mensaje = "Socio almacenado correctamente";
                 titulo = "Genial!";
-                mostrarMensaje(titulo, mensaje);
+                mostrarMensaje_OK(titulo, mensaje);
                 limpiarPantalla();
             }
             
         }
         public void mostrarMensaje(string titulo, string mensaje) {
             MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+        public void mostrarMensaje_OK(string titulo, string mensaje) {
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private bool validarNumero(string valor) {
+            bool respuesta;
+            try {
+                int numero;
+                numero = Convert.ToInt32(valor);
+                respuesta = true;
+            } catch (Exception ex) {
+                respuesta = false;
+            }
+            return respuesta;
         }
     }
 }

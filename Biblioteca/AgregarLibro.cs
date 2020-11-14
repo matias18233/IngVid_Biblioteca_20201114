@@ -65,12 +65,15 @@ namespace Biblioteca {
                 frmPrincipal.Libros.Add(libro);
                 mensaje = "Libro almacenado correctamente";
                 titulo = "Genial!";
-                mostrarMensaje(titulo, mensaje);
+                mostrarMensaje_OK(titulo, mensaje);
                 limpiarPantalla();
             }
         }
         public void mostrarMensaje(string titulo, string mensaje) {
             MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+        public void mostrarMensaje_OK(string titulo, string mensaje) {
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -13,23 +13,19 @@ namespace Biblioteca {
         public frmAgregarEjemplar() {
             InitializeComponent();
         }
-
         private void btnLimpiar_Click(object sender, EventArgs e) {
             limpiarPantalla();
         }
-
         public void limpiarPantalla() {
             txtEdicion.Text = "";
             txtUbicacion.Text = "";
         }
-
         private void frmAgregarEjemplar_Load(object sender, EventArgs e) {
             lstLibros.Items.Clear();
             foreach (var libro in frmPrincipal.Libros) {
                 lstLibros.Items.Add(libro.Nombre);
             }
         }
-
         private void btnGuardar_Click(object sender, EventArgs e) {
             // Variables útiles para mostrar mensajes
             bool error = false;
@@ -49,6 +45,13 @@ namespace Biblioteca {
                 if ("".Equals(edicion)) {
                     error = true;
                     mensaje = "No se ha especificado una edición";
+                } else {
+                    if (validarNumero(edicion)) {
+
+                    } else {
+                        error = true;
+                        mensaje = "No se ha ingresado un valor numérico en edición";
+                    }
                 }
                 if (error == false) {
                     ubicacion = txtUbicacion.Text;
@@ -73,13 +76,26 @@ namespace Biblioteca {
                 }
                 titulo = "Genial!";
                 mensaje = "Ejemplar agregado al libro";
-                mostrarMensaje(titulo, mensaje);
+                mostrarMensaje_OK(titulo, mensaje);
                 limpiarPantalla();
             }
         }
-
         public void mostrarMensaje(string titulo, string mensaje) {
             MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+        public void mostrarMensaje_OK(string titulo, string mensaje) {
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private bool validarNumero(string valor) {
+            bool respuesta;
+            try {
+                int numero;
+                numero = Convert.ToInt32(valor);
+                respuesta = true;
+            } catch (Exception ex) {
+                respuesta = false;
+            }
+            return respuesta;
         }
     }
 }

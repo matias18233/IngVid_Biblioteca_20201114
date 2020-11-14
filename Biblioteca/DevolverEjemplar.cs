@@ -42,6 +42,9 @@ namespace Biblioteca {
         public void mostrarMensaje(string titulo, string mensaje) {
             MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
+        public void mostrarMensaje_OK(string titulo, string mensaje) {
+            MessageBox.Show(mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         private void btnCargar_Click(object sender, EventArgs e) {
             // Variables útiles para mostrar mensajes
             bool error = false;
@@ -75,7 +78,7 @@ namespace Biblioteca {
                                 ejemplar_O.ingresoEjemplar(ejemplar, contador2);
                                 mensaje = "El socio regreso un ejemplar";
                                 titulo = "Genial!";
-                                mostrarMensaje(titulo, mensaje);
+                                mostrarMensaje_OK(titulo, mensaje);
                                 limpiarPantalla();
                             }
                             contador2 = contador2 + 1;
